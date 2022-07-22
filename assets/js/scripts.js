@@ -1,11 +1,12 @@
 import Alpine from 'alpinejs'
-window.Alpine = Alpine
-Alpine.start();
+import LazyLoad from "vanilla-lazyload";
 
+Alpine.start();
 document.addEventListener("DOMContentLoaded", function(){
 
-  console.log('system started');
+ new LazyLoad({
 
+});
 
 });
 

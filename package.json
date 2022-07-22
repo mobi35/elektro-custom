@@ -17,7 +17,10 @@
     "vite-plugin-live-reload": "^2.1.0"
   },
   "dependencies": {
+    "@alpinejs/intersect": "^3.10.3",
+    "alpinejs": "^3.10.3",
     "jquery": "^3.6.0",
-    "sortablejs": "^1.15.0"
+    "sortablejs": "^1.15.0",
+    "vanilla-lazyload": "^17.8.3"
   }
 }
