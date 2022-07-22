@@ -1,4 +1,12 @@
+import Alpine from 'alpinejs'
+window.Alpine = Alpine
+Alpine.start();
+
 document.addEventListener("DOMContentLoaded", function(){
-  // Handler when the DOM is fully loaded
-  console.log('js executed...');
+
+  console.log('system started');
+
+
 });
+
+

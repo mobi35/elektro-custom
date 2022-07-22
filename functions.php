@@ -11,3 +11,6 @@ define('IS_VITE_DEVELOPMENT', false);
 include "inc/inc.vite.php";
 
 
+add_theme_support('menus');
+
+

@@ -9,13 +9,25 @@
 <body <?php body_class('flex flex-col h-screen') ?>>
 <?php wp_body_open(); ?>
 
-    <header class="flex-0 bg-slate-100 shadow-md px-4 test-class border">
+    <header class="py-4 flex-0 bg-slate-100 shadow-md px-4 test-class border">
         <div class="max-w-screen-lg mx-auto flex justify-between items-center min-h-[40px]">
             <div class="">
-                <a href="<?php echo home_url() ?>">Logo</a>
+                <a class="text-red-600" href="<?php echo home_url() ?>">
+                    <img class="w-60" src="<?php echo home_url(); ?>/wp-content/uploads/2022/07/Elektro-Consult-BV_Final-file-1.1.png">
+                </a>
             </div>
-            <div>
-                <?php echo wp_nav_menu() ?>
+            <div x-data="{ open : 1}" class="flex">
+                <ul class="flex space-x-4">
+                <?php     
+                $array_menu = wp_get_nav_menu_items('elektro-default');
+                ?>
+
+                <?php foreach($array_menu as $navitem): ?>
+                    <li x-bind:class="open = <?php echo $navitem->menu_item_parent ?> ? 'hidden' : '' "> <?php echo $navitem->title; ?>  <?php echo $navitem->menu_item_parent; ?> </li>
+                <?php endforeach; ?>
+
+                </ul>
+  
             </div>
         </div>
     </header>
